@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillMap - Календарь событий</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo">S</div>
+        <div>
+          <div>SkillMap</div>
+          <div class="small">Календарь IT-событий</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="events.html">Афиша</a>
+        <a class="active" href="calendar.html">Календарь</a>
+        <a href="event.html">Событие</a>
+        <a href="profile.html">Профиль</a>
+        <a href="admin.html">Админка</a>
+        <a href="manager.html">Менеджер</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="section-head">
+      <div>
+        <h1 style="font-size:44px">Календарь событий</h1>
+        <p>Месячный обзор в более прикладном стиле: видно загрузку недели, форматы активностей и ближайшие слоты, как в корпоративных календарях и планировщиках.</p>
+      </div>
+      <div class="toolbar-group">
+        <a class="btn" href="events.html">Список</a>
+        <a class="btn primary" href="event.html">Открыть событие</a>
+      </div>
+    </div>
+
+    <section class="calendar-shell">
+      <aside class="calendar-sidebar">
+        <span class="kicker">Апрель 2026</span>
+        <h3 style="margin-top:14px;">Обзор месяца</h3>
+        <p>Плотность событий выше по средам и субботам. Внизу оставил легенду по типам, чтобы страницу было удобно показывать на демо.</p>
+
+        <div class="mini-month">
+          <span class="label">Пн</span>
+          <span class="label">Вт</span>
+          <span class="label">Ср</span>
+          <span class="label">Чт</span>
+          <span class="label">Пт</span>
+          <span class="label">Сб</span>
+          <span class="label">Вс</span>
+
+          <span></span>
+          <span></span>
+          <span class="filled">1</span>
+          <span class="filled">2</span>
+          <span class="filled">3</span>
+          <span class="filled">4</span>
+          <span class="filled">5</span>
+          <span class="filled">6</span>
+          <span class="filled">7</span>
+          <span class="filled">8</span>
+          <span class="filled">9</span>
+          <span class="filled">10</span>
+          <span class="filled">11</span>
+          <span class="filled">12</span>
+          <span class="filled">13</span>
+          <span class="filled">14</span>
+          <span class="filled">15</span>
+          <span class="today">16</span>
+          <span class="filled">17</span>
+          <span class="filled">18</span>
+          <span class="filled">19</span>
+          <span class="filled">20</span>
+          <span class="filled">21</span>
+          <span class="filled">22</span>
+          <span class="filled">23</span>
+          <span class="filled">24</span>
+          <span class="filled">25</span>
+          <span class="filled">26</span>
+          <span class="filled">27</span>
+          <span class="filled">28</span>
+          <span class="filled">29</span>
+          <span class="filled">30</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="legend">
+          <div class="legend-item">
+            <span class="legend-mark" style="background:#40ba21;"></span>
+            <span>Вебинары и короткие онлайн-встречи</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-mark" style="background:#27a108;"></span>
+            <span>Курсы и длинные образовательные треки</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-mark" style="background:#1d7f05;"></span>
+            <span>Интенсивы, очные дни и профпробы</span>
+          </div>
+        </div>
+      </aside>
+
+      <div class="calendar-main">
+        <div class="calendar-toolbar">
+          <div>
+            <h3 style="margin-bottom:6px;">Апрель 2026</h3>
+            <p style="margin:0;">Вид "Месяц" с фокусом на ближайшие школьные IT-мероприятия</p>
+          </div>
+          <div class="toolbar-group">
+            <a class="btn" href="#">Сегодня</a>
+            <a class="btn" href="#">Неделя</a>
+            <a class="btn primary" href="#">Месяц</a>
+          </div>
+        </div>
+
+        <section class="calendar-grid">
+          <div class="calendar-header">
+            <div>Понедельник</div>
+            <div>Вторник</div>
+            <div>Среда</div>
+            <div>Четверг</div>
+            <div>Пятница</div>
+            <div>Суббота</div>
+            <div>Воскресенье</div>
+          </div>
+
+          <div class="calendar-days">
+            <article class="day-card muted-day">
+              <div class="day-number"><span>30</span><span class="day-note">Март</span></div>
+            </article>
+            <article class="day-card muted-day">
+              <div class="day-number"><span>31</span><span class="day-note">Март</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>1</span></div>
+              <div class="calendar-event webinar">
+                <strong>17:00 Вебинар</strong>
+                <span>Как выбрать IT-направление</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>2</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>3</span></div>
+              <div class="calendar-event course">
+                <strong>18:30 Курс</strong>
+                <span>Python Start, модуль 1</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>4</span></div>
+              <div class="calendar-event intensive">
+                <strong>11:00 Интенсив</strong>
+                <span>GameDev Lab в кампусе</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>5</span></div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-number"><span>6</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>7</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>8</span></div>
+              <div class="calendar-event webinar">
+                <strong>16:00 Онлайн</strong>
+                <span>Data Science для школьников</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>9</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>10</span></div>
+              <div class="calendar-event course">
+                <strong>18:30 Курс</strong>
+                <span>Frontend Sprint, модуль 2</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>11</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>12</span></div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-number"><span>13</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>14</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>15</span></div>
+              <div class="calendar-event webinar">
+                <strong>17:30 Профориентация</strong>
+                <span>Куда идти после 9 класса</span>
+              </div>
+            </article>
+            <article class="day-card today">
+              <div class="day-number"><span>16</span><span class="day-note">Сегодня</span></div>
+              <div class="calendar-event intensive">
+                <strong>15:30 Очная встреча</strong>
+                <span>Олимпиадная математика + IT</span>
+              </div>
+              <div class="calendar-event course">
+                <strong>19:00 Практикум</strong>
+                <span>Backend на Python</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>17</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>18</span></div>
+              <div class="calendar-event intensive">
+                <strong>10:00 Хак-день</strong>
+                <span>Mini Hackathon для команд</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>19</span></div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-number"><span>20</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>21</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>22</span></div>
+              <div class="calendar-event webinar">
+                <strong>17:00 Вебинар</strong>
+                <span>Программирование для школьников</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>23</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>24</span></div>
+              <div class="calendar-event course">
+                <strong>18:30 Курс</strong>
+                <span>AI Start, модуль 3</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>25</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>26</span></div>
+            </article>
+
+            <article class="day-card">
+              <div class="day-number"><span>27</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>28</span></div>
+              <div class="calendar-event webinar">
+                <strong>18:00 Онлайн</strong>
+                <span>Разбор ЕГЭ по информатике</span>
+              </div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>29</span></div>
+            </article>
+            <article class="day-card">
+              <div class="day-number"><span>30</span></div>
+              <div class="calendar-event intensive">
+                <strong>16:30 Очная экскурсия</strong>
+                <span>День открытых дверей в IT-центре</span>
+              </div>
+            </article>
+            <article class="day-card muted-day">
+              <div class="day-number"><span>1</span><span class="day-note">Май</span></div>
+            </article>
+            <article class="day-card muted-day">
+              <div class="day-number"><span>2</span><span class="day-note">Май</span></div>
+            </article>
+            <article class="day-card muted-day">
+              <div class="day-number"><span>3</span><span class="day-note">Май</span></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="calendar-agenda">
+          <div class="schedule-card">
+            <h3>Ближайшие события</h3>
+            <div class="schedule-list">
+              <div class="schedule-item">
+                <div class="time-badge">16 апр<br />15:30</div>
+                <div>
+                  <p><strong>Олимпиадная математика + IT</strong></p>
+                  <p>Очная встреча для 8-10 классов с разбором задач и кейсов.</p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="time-badge">16 апр<br />19:00</div>
+                <div>
+                  <p><strong>Backend на Python</strong></p>
+                  <p>Вечерний практикум по API, роутам и структуре веб-приложений.</p>
+                </div>
+              </div>
+              <div class="schedule-item">
+                <div class="time-badge">18 апр<br />10:00</div>
+                <div>
+                  <p><strong>Mini Hackathon</strong></p>
+                  <p>Командный день с треками по дизайну, Python и GameDev.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <h3>Панель дня</h3>
+            <div class="event-meta">
+              <span><strong>Свободные окна:</strong> 09:00-15:00</span>
+              <span><strong>Пиковое время:</strong> 16:00-19:30</span>
+              <span><strong>Формат месяца:</strong> 60% онлайн, 40% очно</span>
+              <span><strong>Самая активная категория:</strong> Python и профориентация</span>
+            </div>
+            <div class="section" style="padding-left:0;padding-right:0;padding-bottom:0;">
+              <a class="btn primary" href="events.html">Открыть все мероприятия</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">Прототип календаря событий SkillMap</footer>
+  <script src="script.js"></script>
+</body>
+</html>

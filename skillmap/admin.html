@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillMap - админ-панель</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo">S</div>
+        <div>
+          <div>SkillMap</div>
+          <div class="small">Админ-панель</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="events.html">Афиша</a>
+        <a href="calendar.html">Календарь</a>
+        <a href="event.html">Событие</a>
+        <a href="profile.html">Профиль</a>
+        <a class="active" href="admin.html">Админка</a>
+        <a href="manager.html">Менеджер</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section layout">
+    <aside class="panel">
+      <nav class="side-nav">
+        <a class="active" href="#">События</a>
+        <a href="#">Пользователи</a>
+        <a href="#">Категории</a>
+        <a href="#">Рассылки</a>
+        <a href="#">Статистика</a>
+      </nav>
+    </aside>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h1 style="font-size:40px">Управление событиями</h1>
+          <p>Отдельный интерфейс для создания, редактирования и публикации мероприятий. Календарь встроен и сюда, чтобы администратору было проще видеть пересечения по датам.</p>
+        </div>
+        <div class="inline">
+          <a class="btn" href="calendar.html">Открыть календарь</a>
+          <a class="btn primary" href="#">+ Добавить событие</a>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Название</th><th>Дата</th><th>Формат</th><th>Категория</th><th>Действия</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Программирование для школьников</td><td>22.04.2026</td><td>Онлайн</td><td>Вебинар</td><td>Редактировать · Удалить</td></tr>
+            <tr><td>Основы GameDev на Python</td><td>28.03-04.04</td><td>Очно</td><td>Курс</td><td>Редактировать · Удалить</td></tr>
+            <tr><td>Принцип Дирихле</td><td>08.04.2026</td><td>Онлайн</td><td>Профпроба</td><td>Редактировать · Удалить</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section grid-2">
+        <div class="panel">
+          <h2>Форма добавления</h2>
+          <div class="filters">
+            <input class="search" placeholder="Название события" />
+            <input class="search" placeholder="Дата и время" />
+            <input class="search" placeholder="Формат: онлайн / очно" />
+            <input class="search" placeholder="Категория" />
+            <input class="search" placeholder="Возрастная группа" />
+            <textarea class="search" rows="5" placeholder="Описание"></textarea>
+            <a class="btn primary" href="#">Сохранить событие</a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Календарная логика</h2>
+          <ul class="list-clean">
+            <li>Проверка пересечений по датам перед публикацией</li>
+            <li>Возможность быстро открыть месяц и увидеть плотность событий</li>
+            <li>Удобно планировать очные интенсивы по субботам</li>
+            <li>Календарь помогает балансировать онлайн и офлайн-слоты</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">Прототип админки</footer>
+  <script src="script.js"></script>
+</body>
+</html>

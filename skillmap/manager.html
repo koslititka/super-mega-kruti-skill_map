@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillMap - панель менеджера</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo">S</div>
+        <div>
+          <div>SkillMap</div>
+          <div class="small">Панель менеджера</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="events.html">Афиша</a>
+        <a href="calendar.html">Календарь</a>
+        <a href="event.html">Событие</a>
+        <a href="profile.html">Профиль</a>
+        <a href="admin.html">Админка</a>
+        <a class="active" href="manager.html">Менеджер</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section grid-2">
+    <section class="panel">
+      <h1 style="font-size:40px">Менеджер события</h1>
+      <p>Интерфейс для сопровождения конкретного мероприятия и общения с участниками. Календарь встроен в сценарий, чтобы менеджер видел, где событие стоит в общем расписании месяца.</p>
+      <div class="event-meta">
+        <span><strong>Событие:</strong> Программирование для школьников</span>
+        <span><strong>Дата:</strong> 22 апреля, 17:00</span>
+        <span><strong>Статус:</strong> регистрация открыта</span>
+      </div>
+      <div class="section" style="padding-left:0;padding-right:0;padding-bottom:0;">
+        <div class="inline">
+          <a class="btn primary" href="#">Отправить письмо</a>
+          <a class="btn" href="calendar.html">Открыть календарь месяца</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Быстрые действия</h2>
+      <div class="badges">
+        <span class="badge">Подтверждение регистрации</span>
+        <span class="badge">Напоминание за день</span>
+        <span class="badge">Сообщение после события</span>
+      </div>
+      <div class="section" style="padding-left:0;padding-right:0;padding-bottom:0;">
+        <h3>Связь с календарём</h3>
+        <div class="event-meta">
+          <span>Проверка конкурирующих событий в тот же день</span>
+          <span>Подготовка напоминаний по реальным слотам</span>
+          <span>Быстрый переход к соседним активностям недели</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-wrap" style="grid-column: 1 / -1;">
+      <table>
+        <thead>
+          <tr><th>Участник</th><th>Email</th><th>Класс</th><th>Статус</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Анна Петрова</td><td>anna@example.com</td><td>9</td><td>Подтверждено</td></tr>
+          <tr><td>Максим Иванов</td><td>max@example.com</td><td>10</td><td>Подтверждено</td></tr>
+          <tr><td>София Смирнова</td><td>sofia@example.com</td><td>8</td><td>Ожидает</td></tr>
+          <tr><td>Егор Кузнецов</td><td>egor@example.com</td><td>11</td><td>Подтверждено</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="container footer">Прототип панели менеджера</footer>
+  <script src="script.js"></script>
+</body>
+</html>

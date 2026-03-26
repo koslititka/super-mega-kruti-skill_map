@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillMap - страница события</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo">S</div>
+        <div>
+          <div>SkillMap</div>
+          <div class="small">Карточка события</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="events.html">Афиша</a>
+        <a href="calendar.html">Календарь</a>
+        <a class="active" href="event.html">Событие</a>
+        <a href="profile.html">Профиль</a>
+        <a href="admin.html">Админка</a>
+        <a href="manager.html">Менеджер</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="detail-hero">
+      <section class="detail-card">
+        <span class="kicker">Рекомендуется ученику 9 класса</span>
+        <h1 style="font-size:44px">Fullstack-разработчик на Python</h1>
+        <p>Курс для школьников, уже знакомых с Python на базовом уровне. Участники собирают современное веб-приложение от backend до frontend и финальной презентации проекта.</p>
+        <div class="tag-row">
+          <span class="tag">Программирование</span>
+          <span class="tag">Очно</span>
+          <span class="tag">9-11 классы</span>
+          <span class="tag">Курс</span>
+        </div>
+        <div class="section" style="padding-left:0;padding-right:0;">
+          <div class="inline">
+            <a class="btn primary" href="#">Я пойду</a>
+            <a class="btn" href="calendar.html">Открыть в календаре</a>
+            <a class="btn" href="#">Поделиться</a>
+          </div>
+        </div>
+        <h3>Что внутри курса</h3>
+        <ul class="list-clean">
+          <li>Основы клиент-серверной архитектуры</li>
+          <li>Работа с API и базой данных</li>
+          <li>Создание интерфейсов и пользовательских сценариев</li>
+          <li>Итоговый проект для портфолио</li>
+        </ul>
+      </section>
+
+      <aside class="detail-card">
+        <h3>Детали</h3>
+        <div class="detail-list">
+          <span><strong>Дата:</strong> 5 июля - 18 июля</span>
+          <span><strong>Формат:</strong> очно, Университет Иннополис</span>
+          <span><strong>Организатор:</strong> dovuz@innopolis.university</span>
+          <span><strong>Регистрация:</strong> по внешней ссылке</span>
+        </div>
+        <div class="section" style="padding-left:0;padding-right:0;">
+          <h3>Где это видно в системе</h3>
+          <div class="event-meta">
+            <span>В карточке события - полное описание</span>
+            <span>В афише - краткая карточка с фильтрами</span>
+            <span>В календаре - слот на датах проведения курса</span>
+          </div>
+        </div>
+        <div class="section" style="padding-left:0;padding-right:0;padding-bottom:0;">
+          <a class="btn primary" href="calendar.html">Посмотреть расписание месяца</a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="section grid-2">
+      <div class="panel">
+        <h2>Отзывы</h2>
+        <p>"Понравилось, что можно собрать полноценный проект и понять, как устроены современные сайты."</p>
+        <p>"Хороший баланс между теорией и практикой. Видно, как курс ложится в общий календарь месяца."</p>
+      </div>
+      <div class="panel">
+        <h2>Связанные события</h2>
+        <div class="event-meta">
+          <span>Программирование на Python. Продвинутый уровень</span>
+          <span>Введение в backend-разработку</span>
+          <span>GameDev на Unity</span>
+        </div>
+        <div class="section" style="padding-left:0;padding-right:0;padding-bottom:0;">
+          <a class="btn" href="calendar.html">Открыть все даты в календаре</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">Прототип страницы события</footer>
+  <script src="script.js"></script>
+</body>
+</html>

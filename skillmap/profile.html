@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillMap - профиль</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo">S</div>
+        <div>
+          <div>SkillMap</div>
+          <div class="small">Личный кабинет</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="events.html">Афиша</a>
+        <a href="calendar.html">Календарь</a>
+        <a href="event.html">Событие</a>
+        <a class="active" href="profile.html">Профиль</a>
+        <a href="admin.html">Админка</a>
+        <a href="manager.html">Менеджер</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section grid-2">
+    <section class="panel">
+      <div class="profile-head">
+        <div class="avatar">А</div>
+        <div>
+          <h1 style="font-size:38px">Анна Петрова</h1>
+          <p>9 класс · профиль для персональной подборки и календаря событий</p>
+          <div class="badges">
+            <span class="badge">IT</span>
+            <span class="badge">Игры</span>
+            <span class="badge">Дизайн</span>
+          </div>
+        </div>
+      </div>
+      <div class="section" style="padding-left:0;padding-right:0;padding-bottom:0;">
+        <h3>Настройки</h3>
+        <div class="event-meta">
+          <span>Email-уведомления: включены</span>
+          <span>Напоминание за 24 часа: включено</span>
+          <span>Формат по умолчанию: онлайн + очно</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Рекомендации на этой неделе</h2>
+      <div class="event-meta">
+        <span>1. Программирование для школьников</span>
+        <span>2. GameDev: как стать разработчиком игр</span>
+        <span>3. Fullstack-разработчик на Python</span>
+      </div>
+      <div class="section" style="padding-left:0;padding-right:0;padding-bottom:0;">
+        <div class="inline">
+          <a class="btn primary" href="events.html">Перейти к афише</a>
+          <a class="btn" href="calendar.html">Открыть мой календарь</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Мои события</h2>
+      <div class="event-meta">
+        <span>Зарегистрирован: Основы GameDev на Python</span>
+        <span>Сохранено: GameDev на Unity</span>
+        <span>Завершено: Вебинар по программированию</span>
+      </div>
+      <div class="section" style="padding-left:0;padding-right:0;padding-bottom:0;">
+        <h3>Календарная сводка</h3>
+        <div class="event-meta">
+          <span>16 апреля - практикум по backend</span>
+          <span>18 апреля - mini hackathon</span>
+          <span>22 апреля - вебинар по программированию</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Как работает персонализация</h2>
+      <p>Рекомендации собираются по интересам, возрасту и истории просмотров. Календарь использует те же данные, поэтому приоритетные события видны и в карточках, и в сетке месяца.</p>
+      <div class="badges">
+        <span class="badge">Интересы</span>
+        <span class="badge">Возраст</span>
+        <span class="badge">История действий</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">Прототип профиля</footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillMap - афиша событий</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="logo">S</div>
+        <div>
+          <div>SkillMap</div>
+          <div class="small">Афиша событий</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Главная</a>
+        <a class="active" href="events.html">Афиша</a>
+        <a href="calendar.html">Календарь</a>
+        <a href="event.html">Событие</a>
+        <a href="profile.html">Профиль</a>
+        <a href="admin.html">Админка</a>
+        <a href="manager.html">Менеджер</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container section">
+    <div class="section-head">
+      <div>
+        <h1 style="font-size:42px">Афиша IT-активностей</h1>
+        <p>Список и фильтры в одном экране. Рядом появился полноценный календарный режим, поэтому пользователь может быстро переключаться между карточками и сеткой месяца.</p>
+      </div>
+      <div class="badges">
+        <span class="badge">Вид: список</span>
+        <a class="badge" href="calendar.html">Вид: календарь</a>
+      </div>
+    </div>
+
+    <div class="layout">
+      <aside class="panel">
+        <div class="filters">
+          <input class="search" type="text" placeholder="Поиск по названию" />
+          <div class="filter-group">
+            <strong>Направления</strong>
+            <div class="chips">
+              <span class="chip" data-toggle>Python</span>
+              <span class="chip" data-toggle>GameDev</span>
+              <span class="chip" data-toggle>3D</span>
+              <span class="chip" data-toggle>Data Science</span>
+              <span class="chip" data-toggle>ЕГЭ</span>
+            </div>
+          </div>
+          <div class="filter-group">
+            <strong>Формат</strong>
+            <div class="chips">
+              <span class="chip" data-toggle>Онлайн</span>
+              <span class="chip" data-toggle>Очно</span>
+            </div>
+          </div>
+          <div class="filter-group">
+            <strong>Возраст</strong>
+            <div class="chips">
+              <span class="chip" data-toggle>6-7</span>
+              <span class="chip" data-toggle>8-9</span>
+              <span class="chip" data-toggle>10-11</span>
+              <span class="chip" data-toggle>Родители</span>
+            </div>
+          </div>
+          <div class="filter-group">
+            <strong>Категория</strong>
+            <div class="chips">
+              <span class="chip" data-toggle>Курс</span>
+              <span class="chip" data-toggle>Вебинар</span>
+              <span class="chip" data-toggle>Профпроба</span>
+              <span class="chip" data-toggle>ДОД</span>
+            </div>
+          </div>
+          <div class="inline">
+            <a class="btn primary" href="#cards">Применить</a>
+            <a class="btn" href="calendar.html">Открыть календарь</a>
+          </div>
+        </div>
+      </aside>
+
+      <section id="cards" class="grid-2">
+        <article class="event-card">
+          <div class="event-top"><span class="tag">Для вас</span><span class="small">Онлайн</span></div>
+          <h3>Статистика: детектив в мире данных</h3>
+          <p>Практическое занятие о статистике и её связи с анализом данных и AI.</p>
+          <div class="event-meta">
+            <span>20 марта, 18:45</span>
+            <span>Математика, Data Science & AI</span>
+            <span>8-11 классы</span>
+          </div>
+          <div class="inline">
+            <a class="btn primary" href="event.html">Подробнее</a>
+            <a class="btn" href="calendar.html">Показать дату</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-top"><span class="tag">Популярно</span><span class="small">Очно</span></div>
+          <h3>Fullstack-разработчик на Python</h3>
+          <p>Очный курс по созданию веб-приложений: от серверной логики до интерфейса.</p>
+          <div class="event-meta">
+            <span>5 июля - 18 июля</span>
+            <span>Программирование</span>
+            <span>9-11 классы</span>
+          </div>
+          <div class="inline">
+            <a class="btn primary" href="event.html">Открыть</a>
+            <a class="btn" href="calendar.html">В календарь</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-top"><span class="tag">Набор открыт</span><span class="small">Очно</span></div>
+          <h3>GameDev на Unity</h3>
+          <p>Интенсив с проектной работой, финальной презентацией и игровым прототипом.</p>
+          <div class="event-meta">
+            <span>21 июня - 4 июля</span>
+            <span>Game Development</span>
+            <span>9-11 классы</span>
+          </div>
+          <div class="inline">
+            <a class="btn primary" href="event.html">Подробнее</a>
+            <a class="btn" href="calendar.html">Смотреть даты</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-top"><span class="tag">Подготовка</span><span class="small">Онлайн</span></div>
+          <h3>Подготовка к ОГЭ по математике</h3>
+          <p>Модуль с разбором тестов и задач развёрнутой части.</p>
+          <div class="event-meta">
+            <span>6 апреля - 29 мая</span>
+            <span>ОГЭ</span>
+            <span>7-9 классы</span>
+          </div>
+          <div class="inline">
+            <a class="btn primary" href="event.html">Смотреть</a>
+            <a class="btn" href="calendar.html">Открыть сетку</a>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <section class="section">
+      <div class="panel">
+        <div class="section-head">
+          <div>
+            <h2>Календарный режим</h2>
+            <p>Если нужно быстро оценить загруженность недели, даты очных выездов и плотность событий, удобнее перейти в месячную сетку.</p>
+          </div>
+          <a class="btn primary" href="calendar.html">Перейти в календарь</a>
+        </div>
+        <div class="event-meta">
+          <span>Цветом выделены вебинары, курсы и интенсивы</span>
+          <span>Отдельно показаны ближайшие события и обзор дня</span>
+          <span>Подходит как для пользователя, так и для презентации проекта</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">Прототип страницы афиши</footer>
+  <script src="script.js"></script>
+</body>
+</html>
