@@ -1,0 +1,50 @@
+[
+  {
+    "fullName": "Иван Петров",
+    "email": "ivan@example.com",
+    "grade": 10,
+    "interests": ["IT", "Наука"]
+  },
+  {
+    "fullName": "Мария Сидорова",
+    "email": "maria@example.com",
+    "grade": 11,
+    "interests": ["IT", "Аналитика"]
+  },
+  {
+    "fullName": "Алексей Козлов",
+    "email": "alexey@example.com",
+    "grade": 9,
+    "interests": ["Игры", "IT"]
+  },
+  {
+    "fullName": "Екатерина Новикова",
+    "email": "kate@example.com",
+    "grade": 8,
+    "interests": ["Дизайн", "Медиа"]
+  },
+  {
+    "fullName": "Дмитрий Волков",
+    "email": "dmitry@example.com",
+    "grade": 11,
+    "interests": ["Образование", "Наука"]
+  },
+  {
+    "fullName": "Анна Морозова",
+    "email": "anna@example.com",
+    "grade": 10,
+    "interests": ["IT", "Предпринимательство"]
+  },
+  {
+    "fullName": "Артём Лебедев",
+    "email": "artem@example.com",
+    "grade": 7,
+    "interests": ["Игры", "Дизайн"]
+  },
+  {
+    "fullName": "София Кузнецова",
+    "email": "sofia@example.com",
+    "grade": 9,
+    "interests": ["Аналитика", "Образование"]
+  }
+]

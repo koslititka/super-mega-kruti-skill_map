@@ -1,0 +1,96 @@
+.card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.link {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.date {
+  font-size: 14px;
+  color: var(--color-primary);
+  margin: 0 0 4px;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0 0 12px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.tag {
+  padding: 3px 8px;
+  background: var(--color-bg-secondary);
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.ageGroups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.ageTag {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.actions {
+  padding: 0 20px 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.regLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  padding: 5px 12px;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.regLink:hover {
+  background: var(--color-primary);
+  color: #fff;
+}

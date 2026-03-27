@@ -1,0 +1,220 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ORGANIZER
+  ADMIN
+}
+
+enum Format {
+  ONLINE
+  OFFLINE
+}
+
+enum EventType {
+  WEBINAR
+  COURSE
+  PROFPROBA
+  DOD
+}
+
+enum RegistrationStatus {
+  PENDING
+  REGISTERED
+  CANCELLED
+}
+
+enum NotificationType {
+  EVENT_REMINDER
+  EVENT_RATING
+  REGISTRATION_CONFIRMED
+  SYSTEM
+  EVENT_REVIEW
+}
+
+model User {
+  id               Int              @id @default(autoincrement())
+  email            String?          @unique
+  passwordHash     String?
+  fullName         String
+  grade            Int?
+  age              Int?
+  telegramId       String?          @unique
+  telegramUsername  String?
+  telegramPhotoUrl String?
+  googleId         String?          @unique
+  emailVerified    Boolean          @default(false)
+  role             Role             @default(USER)
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  createdEvents    Event[]          @relation("CreatedEvents")
+  favorites        Favorite[]
+  registrations    Registration[]
+  eventViews       EventView[]
+  interests        UserInterest[]
+  notifications    Notification[]
+  ratings          EventRating[]
+}
+
+model Event {
+  id               Int              @id @default(autoincrement())
+  title            String
+  description      String
+  date             DateTime
+  endDate          DateTime?
+  time             String?
+  format           Format
+  eventType        EventType
+  registrationLink String?
+  organizerEmail   String
+  createdById      Int
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  createdBy        User             @relation("CreatedEvents", fields: [createdById], references: [id])
+  categories       EventCategory[]
+  ageGroups        EventAgeGroup[]
+  favorites        Favorite[]
+  registrations    Registration[]
+  eventViews       EventView[]
+  ratings          EventRating[]
+}
+
+model Category {
+  id        Int              @id @default(autoincrement())
+  name      String           @unique
+
+  events    EventCategory[]
+  users     UserInterest[]
+}
+
+model EventCategory {
+  eventId    Int
+  categoryId Int
+
+  event      Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([eventId, categoryId])
+}
+
+model AgeGroup {
+  id     Int              @id @default(autoincrement())
+  name   String           @unique
+
+  events EventAgeGroup[]
+}
+
+model EventAgeGroup {
+  eventId    Int
+  ageGroupId Int
+
+  event      Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  ageGroup   AgeGroup @relation(fields: [ageGroupId], references: [id], onDelete: Cascade)
+
+  @@id([eventId, ageGroupId])
+}
+
+model Favorite {
+  userId    Int
+  eventId   Int
+  createdAt DateTime @default(now())
+
+  user      User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  event     Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@id([userId, eventId])
+}
+
+model Registration {
+  id           Int                @id @default(autoincrement())
+  userId       Int
+  eventId      Int
+  status       RegistrationStatus @default(PENDING)
+  confirmToken String?            @unique
+  confirmedAt  DateTime?
+  createdAt    DateTime           @default(now())
+
+  user         User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  event        Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, eventId])
+}
+
+model EventView {
+  id       Int      @id @default(autoincrement())
+  userId   Int?
+  eventId  Int
+  viewedAt DateTime @default(now())
+
+  user     User?  @relation(fields: [userId], references: [id], onDelete: SetNull)
+  event    Event  @relation(fields: [eventId], references: [id], onDelete: Cascade)
+}
+
+model UserInterest {
+  userId     Int
+  categoryId Int
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([userId, categoryId])
+}
+
+model EmailVerification {
+  id               Int      @id @default(autoincrement())
+  email            String
+  code             String
+  registrationData Json?
+  expiresAt        DateTime
+  verified         Boolean  @default(false)
+  createdAt        DateTime @default(now())
+
+  @@index([email, code])
+}
+
+model Notification {
+  id        Int              @id @default(autoincrement())
+  userId    Int
+  title     String
+  message   String
+  type      NotificationType
+  read      Boolean          @default(false)
+  link      String?
+  createdAt DateTime         @default(now())
+
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model EventRating {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  eventId   Int
+  rating    Int
+  comment   String?
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  event     Event    @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, eventId])
+}
+
+model PasswordReset {
+  id        Int      @id @default(autoincrement())
+  email     String
+  token     String   @unique
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([email, token])
+}

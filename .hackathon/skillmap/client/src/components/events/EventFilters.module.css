@@ -1,0 +1,87 @@
+/* ── Sidebar panel (replaces old sticky horizontal bar) ── */
+.bar {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Filter group ── */
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.group:first-child {
+  padding-top: 0;
+}
+
+.group:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+/* ── View toggle ── */
+.viewToggle {
+  display: flex;
+  gap: 4px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+  margin-top: 4px;
+}
+
+.viewBtn {
+  flex: 1;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid var(--border-light);
+  border-radius: var(--r-sm);
+  background: white;
+  color: var(--text-hint);
+  cursor: pointer;
+  transition: all 0.13s;
+}
+
+.viewBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-mid);
+}
+
+.viewBtnActive {
+  background: var(--bg-subtle);
+  color: var(--text-primary);
+  border-color: var(--border-mid);
+}
+
+/* ── Mobile: collapsible toggle ── */
+@media (max-width: 767px) {
+  .viewToggle {
+    display: none;
+  }
+}

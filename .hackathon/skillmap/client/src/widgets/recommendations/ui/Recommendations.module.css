@@ -1,0 +1,34 @@
+.section {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 16px;
+  color: var(--color-text);
+  letter-spacing: -0.3px;
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+.card {
+  min-width: 300px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}

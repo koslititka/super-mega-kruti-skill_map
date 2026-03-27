@@ -1,0 +1,185 @@
+/* ── Hero wrapper ── */
+.hero {
+  background: var(--bg-surface);
+  border-bottom: 0.5px solid var(--border-light);
+  padding: 40px 24px 36px;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+/* ── Left column ── */
+.heroLeft {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-hint);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.titleAccent {
+  color: var(--accent-dark);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 420px;
+  margin: 0;
+}
+
+.ctas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.ctaPrimary {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #0a1f08;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: var(--r-md);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.13s;
+}
+
+.ctaPrimary:hover {
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+.ctaSecondary {
+  padding: 10px 20px;
+  border: 0.5px solid var(--border-light);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--r-md);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 0.13s, color 0.13s;
+}
+
+.ctaSecondary:hover {
+  border-color: var(--border-mid);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* ── Right column — stat grid ── */
+.heroRight {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* ── Stat card ── */
+.statCard {
+  background: var(--bg-subtle);
+  border: 0.5px solid var(--border-light);
+  border-radius: var(--r-lg);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statValue {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.statValueAccent {
+  color: var(--accent-dark);
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--text-hint);
+  line-height: 1.4;
+}
+
+/* ── Tablet (≤768px): stack vertically, stats → 4 columns in 1 row ── */
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .heroLeft {
+    flex: none;
+  }
+
+  .heroRight {
+    flex: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .statCard {
+    padding: 12px 10px;
+  }
+
+  .statValue {
+    font-size: 22px;
+  }
+}
+
+/* ── Mobile (<480px): hide stats, one CTA ── */
+@media (max-width: 479px) {
+  .hero {
+    padding: 28px 16px 24px;
+  }
+
+  .heroRight {
+    display: none;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .ctas {
+    flex-direction: column;
+  }
+
+  .ctaSecondary {
+    display: none;
+  }
+
+  .ctaPrimary {
+    text-align: center;
+  }
+}

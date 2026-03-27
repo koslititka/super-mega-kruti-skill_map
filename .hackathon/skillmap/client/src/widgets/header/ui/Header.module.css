@@ -1,0 +1,304 @@
+.header {
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.navLink {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.navLink:hover {
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profileLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.authButtons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.navLinkActive {
+  background: var(--color-bg-secondary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.langToggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 4px 10px;
+  height: 32px;
+  letter-spacing: 0.03em;
+  transition: border-color 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.langToggle:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.favLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.favLink:hover {
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.bellWrapper {
+  position: relative;
+}
+
+.bell {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bell:hover {
+  background: var(--color-bg-secondary);
+}
+
+.bellBadge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+.notifDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 320px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  z-index: 200;
+  overflow: hidden;
+}
+
+.notifHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.markAll {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.notifEmpty {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.notifList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.notifItem {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.notifItem:last-child {
+  border-bottom: none;
+}
+
+.notifItem:hover {
+  background: var(--color-bg-secondary);
+}
+
+.notifUnread {
+  background: color-mix(in srgb, var(--color-primary) 5%, transparent);
+}
+
+.notifTitle {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.notifMessage {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.notifTime {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 8px;
+  color: var(--color-text);
+  border-radius: 6px;
+  line-height: 1;
+}
+
+.burger:hover {
+  background: var(--color-bg-secondary);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 16px;
+    gap: 0;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 0 4px;
+    border-top: 1px solid var(--color-border);
+    margin-top: 8px;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .navLink {
+    padding: 10px 8px;
+  }
+
+  .actions {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .userName {
+    display: none;
+  }
+
+  .notifDropdown {
+    right: -60px;
+    width: 290px;
+  }
+}

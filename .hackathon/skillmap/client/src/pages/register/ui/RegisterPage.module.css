@@ -1,0 +1,17 @@
+.page {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.divider {
+  text-align: center;
+  margin: 24px 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.telegram {
+  display: flex;
+  justify-content: center;
+}

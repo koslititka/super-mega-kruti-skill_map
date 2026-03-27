@@ -1,0 +1,92 @@
+.section {
+  background: var(--bg-page);
+  padding: 24px;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 599px) {
+  .section {
+    padding: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Skeleton ── */
+.skeleton {
+  background: var(--bg-subtle);
+  border-radius: var(--r-lg);
+  height: 210px;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+/* ── Empty state ── */
+.empty {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 32px;
+  line-height: 1;
+  opacity: 0.4;
+}
+
+.emptyText {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.emptyReset {
+  padding: 8px 18px;
+  border: 0.5px solid var(--border-light);
+  border-radius: var(--r-md);
+  background: white;
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.13s;
+}
+
+.emptyReset:hover {
+  border-color: var(--border-mid);
+}

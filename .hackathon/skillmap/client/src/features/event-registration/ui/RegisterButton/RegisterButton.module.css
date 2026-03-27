@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.extLink {
+  font-size: 14px;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.extLink:hover {
+  text-decoration: underline;
+}
